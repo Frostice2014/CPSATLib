@@ -2,8 +2,8 @@
 **WARNING! FOLLOW THESE INSTRUCTIONS OR ELSE CPSATLib MAY NOT WORK!**
 
 1. Place `CPSATLib` in `game.ReplicatedStorage` or `game.ServerScriptService` depending on the use case. I prefer to place it in `game.ReplicatedStorage`.
-2. If `CPSATLibTesting` is included, DISABLE IT. You can disable it by turning off the `Enable`d property in the script under `Behavior`. *Make sure you don't turn off `CPSATLib!`*
-3. If you really need `CPSATLibTesting` for some reason, place it in `game.ServerScriptService.`
+2. If `CPSATLibTesting` is included, DISABLE OR DELETE IT. You can disable it by turning off the `Enabled` property in the script under `Behavior`. *Make sure you don't turn off `CPSATLib!`*
+3. If you really need `CPSATLibTesting` for some reason, place it in `game.ServerScriptService.` and leave it enabled.
 
 # CPSATLib
 CPSATLib is a Roblox ModuleScript library for functions that you probably have to implement, that you don't have to place in your code anymore! An example is simply rounding to a decimal. Instead of having to implement this `local function roundDecimal()` in your code
