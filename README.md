@@ -6,7 +6,7 @@
 3. If you really need `CPSATLibTesting` for some reason, place it in `game.ServerScriptService.`
 
 # CPSATLib
-CPSATLib is a Roblox ModuleScript library for functions that you probably have to implement. An example is simply rounding to a decimal. Instead of having to implement this `local function roundDecimal()` in your code
+CPSATLib is a Roblox ModuleScript library for functions that you probably have to implement, that you don't have to place in your code anymore! An example is simply rounding to a decimal. Instead of having to implement this `local function roundDecimal()` in your code
 
 ```
 local function roundToDecimal(num: number, numDecimalPlaces: number)
@@ -42,6 +42,6 @@ function module.RoundNumber(num: number, numDecimalPlaces: number) -- numDecimal
 	return tonumber(string.format("%." .. (numDecimalPlaces) .. "f", num))
 end -- Created by: @royaltoe. Thanks!
 ```
-
-It doesn't just include a single function, it has so many more functions! There's `.VectorDistance()`, `.BrickColorToColor3()`, `.CFrameToVectorAnglesXYZ()`, `.RoundVector()`, `:GetOSTime24Hour()` and so many more!
+Basically, you don't have to reinvent the wheel *again*.
+It doesn't just include a single function, it has so many more functions! There's `.VectorDistance()`, `.BrickColorToColor3()`, `.CFrameToVectorAnglesXYZ()`, `.RoundVector()`, `:GetOSTime24Hour()` and so many more! If I ever take a function from the DevForum, they will be credited in a comment at the end of the function. You can see for yourself!
 Credit me and all of the people who I took the functions from if you can. Toodles!
