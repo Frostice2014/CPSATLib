@@ -46,7 +46,7 @@ local function libWarn(any: any)
 	end
 	
 	warn("[CPSATLib / Warn]: " .. tostring(any))
-end
+end -- Made by: @Frostice2013. Created for CPSATLib.
 
 local function libPrint(any: any)
 	if libSettings.disableMessages then
@@ -54,7 +54,7 @@ local function libPrint(any: any)
 	end
 	
 	warn("[CPSATLib / Print]: " .. tostring(any))
-end
+end -- Made by: @Frostice2013. Created for CPSATLib.
 
 local function libFatal(any: any)
 	if libSettings.disableFatals then
@@ -63,11 +63,18 @@ local function libFatal(any: any)
 	end
 
 	error("[CPSATLib / Fatal]: " .. tostring(any))
-end
+end -- Made by: @Frostice2013. Created for CPSATLib.
 
 
-function module.RoundNumber(num: number, numDecimalPlaces: number)
-	--if not num == type()
+function module.RoundNumber(num: number, numDecimalPlaces: number) -- numDecimalPlaces is how many places to round to. Place in an INTEGER here!
+	if type(num) ~= module.vanillaDatatypes.numType then
+		return libWarn(".RoundNumber() was used wwith a non-number argument! Argument #1")
+	end
+	
+	if type(numDecimalPlaces) ~= module.vanillaDatatypes.numType then
+		return libWarn(".RoundNumber() was used wwith a non-number argument! Argument #2")
+	end
+	
 	return tonumber(string.format("%." .. (numDecimalPlaces) .. "f", num))
 end -- Created by: @royaltoe. Thanks!
 
@@ -95,7 +102,7 @@ function module.RoundVector(vectorToRound: Vector3)
 		math.round(vectorToRound.Y), 
 		math.round(vectorToRound.Z)
 	)
-end
+end -- Made by: @Frostice2013
 
 function module.RoundVectorToDecimal(vectorToRound: Vector3, vectorDecimalPlaces: number)
 	local RoundedVectorX = string.format("%." .. (vectorDecimalPlaces) .. "f", vectorToRound.X)
@@ -144,7 +151,7 @@ function module.BrickColorToColor3(brickColor: BrickColor)
 	end
 	
 	return brickColor.Color
-end
+end -- Made by: @Frostice2013
 
 function module.Color3ToBrickColor(color3: Color3)
 	if type(color3) ~= type(Color3.new(1, 1, 1)) then
@@ -204,7 +211,7 @@ function module.ConcatStringWithInbetween(str: string1, str2: string, intermedia
 	end
 	
 	return str .. intermediate .. str2
-end
+end -- Made by: @Frostice2013
 
 function module:GetOSTime24Hour()
 	return module.ConcatStringWithInbetween(
