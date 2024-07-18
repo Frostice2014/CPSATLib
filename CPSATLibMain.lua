@@ -1,5 +1,6 @@
 -- Created by Frostice2013!
 -- Credits to everyone I stole the code from LOL
+-- Coming from the day after, we did NOT steal this we credited them pls dont cancel me
 
 --[[
 	CPSATLib
@@ -66,17 +67,30 @@ local function libFatal(any: any)
 end -- Made by: @Frostice2013. Created for CPSATLib.
 
 
-function module.RoundNumber(num: number, numDecimalPlaces: number) -- numDecimalPlaces is how many places to round to. Place in an INTEGER here!
+function module.RoundNumberToDecimal(num: number, numDecimalPlaces: number) -- numDecimalPlaces is how many places to round to. Place in an INTEGER here!
 	if type(num) ~= module.vanillaDatatypes.numType then
-		return libWarn(".RoundNumber() was used wwith a non-number argument! Argument #1")
+		return libWarn(".RoundNumberToDecimal() was used wwith a non-number argument! Argument #1")
 	end
 	
 	if type(numDecimalPlaces) ~= module.vanillaDatatypes.numType then
-		return libWarn(".RoundNumber() was used wwith a non-number argument! Argument #2")
+		return libWarn(".RoundNumberToDecimal() was used wwith a non-number argument! Argument #2")
 	end
 	
 	return tonumber(string.format("%." .. (numDecimalPlaces) .. "f", num))
 end -- Created by: @royaltoe. Thanks!
+
+function module.RoundNumberToNearestInteger(number: number, roundTo: number)
+	if type(number) ~= module.vanillaDatatypes.numType then
+		return libWarn(".RoundNumberToNearestInteger() was used with a non-number argument! Argument #1")
+	end
+	
+	if type(roundTo) ~= module.vanillaDatatypes.numType then
+		return libWarn(".RoundNumberToNearestInteger() was used with a non-number argument! Argument #2")
+	end
+	
+	return math.floor(number / roundTo) * roundTo
+end -- Created by: @Daw588, @CSharper 
+-- Typechecks and modifications added by @Frostice2013
 
 function module.CFRameEulerToVectorXYZ(CFrame: CFrame)
 	local eulerAngleX, eulerAngleY, eulerAngleZ = CFrame:ToEulerAnglesXYZ()
@@ -282,3 +296,4 @@ function module:ReturnVanillaTypes()
 end -- Made by: @Frostice2013
 
 return module
+
