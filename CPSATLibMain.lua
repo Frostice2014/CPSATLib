@@ -89,8 +89,9 @@ function module.RoundNumberToNearestInteger(number: number, roundTo: number)
 	end
 	
 	return math.floor(number / roundTo) * roundTo
-end -- Created by: @Daw588, @CSharper 
+end -- Created by: @Daw588, @C_Sharper 
 -- Typechecks and modifications added by @Frostice2013
+-- Sorry @C_Sharper! I made a typo in your username here.
 
 function module.CFRameEulerToVectorXYZ(CFrame: CFrame)
 	local eulerAngleX, eulerAngleY, eulerAngleZ = CFrame:ToEulerAnglesXYZ()
